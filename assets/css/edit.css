@@ -1,0 +1,17 @@
+.save, .update-password{
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+}
+.edit-info, .change-password{
+  border: 1px solid #EEEEEE;
+  padding: 10px 30px 30px;
+  font-weight: bold;
+}
+label{
+  display: block;
+}
+select, input[type=text], input[type=password]{
+  width: 100%;
+}

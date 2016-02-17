@@ -1,0 +1,21 @@
+.to-dashboard{
+  background-color: #1585FF;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+}
+label{
+  display: block;
+}
+.create{
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  margin-right: 35px;
+}
+.new-user{
+  border: 1px solid #EEEEEE;
+  padding: 10px 30px 30px;
+  font-weight: bold;
+}

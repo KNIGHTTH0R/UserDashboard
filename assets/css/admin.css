@@ -1,0 +1,15 @@
+.add-user{
+  border: none;
+  background-color: #23518C;
+  color: white;
+  padding: 5px 10px;
+}
+
+.actions{
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.actions:nth-of-type(1){
+  margin-left: 0px;
+}

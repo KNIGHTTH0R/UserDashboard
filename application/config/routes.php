@@ -1,6 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -19,13 +17,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | Please see the user guide for complete details:
 |
-|	https://codeigniter.com/user_guide/general/routing.html
+|	http://codeigniter.com/user_guide/general/routing.html
 |
 | -------------------------------------------------------------------------
 | RESERVED ROUTES
 | -------------------------------------------------------------------------
 |
-| There are three reserved routes:
+| There area two reserved routes:
 |
 |	$route['default_controller'] = 'welcome';
 |
@@ -35,20 +33,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 |	$route['404_override'] = 'errors/page_missing';
 |
-| This route will tell the Router which controller/method to use if those
-| provided in the URL cannot be matched to a valid route.
+| This route will tell the Router what URI segments to use if those provided
+| in the URL cannot be matched to a valid route.
 |
-|	$route['translate_uri_dashes'] = FALSE;
-|
-| This is not exactly a route, but allows you to automatically route
-| controller and method names that contain dashes. '-' isn't a valid
-| class or method name character, so it requires translation.
-| When you set this option to TRUE, it will replace ALL dashes with
-| underscores in the controller and method URI segments.
-|
-| Examples:	my-controller/index	-> my_controller/index
-|		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+
+$route['default_controller'] = "main";
+$route['signin'] = "main/signin";
+$route['login_check'] = "main/login_check";
+$route['register'] = "main/register";
+$route['process_registration'] = "main/process_registration";
+$route['logoff'] = "main/logoff";
+
+$route['leave_message/(:any)'] = "messages/leave_message/$1";
+$route['leave_comment/(:any)'] = "messages/leave_comment/$1";
+
+$route['admin'] = "users/admin";
+$route['dashboard/add_new_user'] = "dashboard/add_new_user";
+$route['users/show/(:any)'] = "users/show/$1";
+$route['users/edit/(:any)'] = "users/edit/$1";
+$route['users/remove/(:any)'] = "users/remove/$1";
+$route['users/process_user_changes/(:any)'] = "users/process_user_changes/$1";
+$route['users/change_password/(:any)'] = "users/change_password/$1";
+$route['users/new'] = "users/new";
+
+$route['dashboard'] = "dashboard";
+$route['dashboard/admin'] = "dashboard/admin";
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+
+/* End of file routes.php */
+/* Location: ./application/config/routes.php */
